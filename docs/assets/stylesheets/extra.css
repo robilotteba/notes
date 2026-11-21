@@ -1,0 +1,54 @@
+/* ===== RBA Notes — toques hacker sobre Material ===== */
+
+:root {
+  --md-accent-fg-color: #00ff88;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0d1117;
+  --md-code-bg-color: #161b22;
+  --md-primary-fg-color: #0d1117;
+  --md-typeset-a-color: #3dd68c;
+}
+
+/* Tipografía mono en títulos del sidebar para dar aire de "notas" */
+.md-nav__title {
+  letter-spacing: .3px;
+}
+
+/* Encabezado H1 con guiño a terminal */
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: #e6edf3;
+  font-weight: 700;
+}
+
+/* Tablas más legibles */
+.md-typeset table:not([class]) th {
+  background: rgba(0, 255, 136, .08);
+}
+
+/* Bloques de código con borde sutil */
+[data-md-color-scheme="slate"] .md-typeset pre > code {
+  border: 1px solid rgba(255,255,255,.05);
+}
+
+/* Tarjetas de la home (grid) */
+.grid.cards > ul > li {
+  border-radius: 12px;
+  transition: border-color .2s, transform .2s;
+}
+.grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  transform: translateY(-2px);
+}
+
+/* Badge "en construcción" */
+.wip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: .7rem;
+  background: rgba(255, 193, 7, .15);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, .3);
+}

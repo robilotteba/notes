@@ -1,0 +1,141 @@
+site_name: RBA Notes
+site_author: Brian Robilotte
+site_description: Apuntes de seguridad informática — Red Team & Blue Team. Cuaderno de estudio público.
+# 👇 Cambiá la URL si tu repo o usuario cambian
+site_url: https://robilotteba.github.io/notes/
+repo_url: https://github.com/robilotteba/notes
+repo_name: robilotteba/notes
+copyright: Copyright &copy; Brian Robilotte — Contenido educativo (CC BY 4.0)
+
+theme:
+  name: material
+  language: es
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo oscuro
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      lang: es
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/robilotteba
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/TU_USUARIO_LINKEDIN/
+      name: LinkedIn
+    - icon: simple/tryhackme
+      link: https://tryhackme.com/p/TU_USUARIO_THM
+      name: TryHackMe
+  generator: false
+
+nav:
+  - Inicio: index.md
+  - Academies:
+      - academies/index.md
+      - TryHackMe: academies/tryhackme.md
+      - HackMyVM: academies/hackmyvm.md
+      - EducaciónIT: academies/educacionit.md
+  - Fundamentos:
+      - fundamentos/index.md
+      - Redes: fundamentos/redes.md
+      - Linux: fundamentos/linux.md
+      - Windows: fundamentos/windows.md
+  - Red Team:
+      - redteam/index.md
+      - Metodología: redteam/metodologia.md
+      - Reconocimiento: redteam/reconocimiento.md
+      - Herramientas: redteam/herramientas.md
+      - Web Pentest: redteam/web.md
+      - Network Pentest: redteam/network.md
+      - Privilege Escalation: redteam/privesc.md
+      - Cloud Pentest: redteam/cloud.md
+      - Pwn & Reversing: redteam/pwn.md
+      - Social Engineering: redteam/social.md
+  - Blue Team:
+      - blueteam/index.md
+      - SOC: blueteam/soc.md
+      - SIEM: blueteam/siem.md
+      - Análisis de logs: blueteam/logs.md
+      - Análisis de red: blueteam/red.md
+      - Respuesta a incidentes: blueteam/ir.md
+      - Threat Intelligence: blueteam/threat-intel.md
+      - Forense: blueteam/forense.md
+      - Detection Engineering: blueteam/detection.md
+      - Herramientas: blueteam/herramientas.md
+  - Writeups:
+      - writeups/index.md
+      - Plantilla: writeups/plantilla.md
+  - Recursos: recursos.md

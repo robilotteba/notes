@@ -1,0 +1,19 @@
+title: Posible fuerza bruta seguida de login exitoso
+id: 00000000-0000-0000-0000-000000000001
+status: experimental
+description: Detecta muchos 4625 (login fallido) desde una IP seguidos de un 4624.
+author: robilotteba
+logsource:
+  product: windows
+  service: security
+detection:
+  fallidos:
+    EventID: 4625
+  exitoso:
+    EventID: 4624
+  timeframe: 5m
+  condition: fallidos | count() > 20 and exitoso
+level: high
+tags:
+  - attack.credential_access
+  - attack.t1110
